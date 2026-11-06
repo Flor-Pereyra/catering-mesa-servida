@@ -19,16 +19,16 @@ public class GestorDeCarta {
                 mod.aplicar();
                 aplicadasConExito.push(mod);
             }
-            // Si todo sale bien, se guardan en el historial general en orden
+           
             for (Modificacion mod : aplicadasConExito) {
                 historial.push(mod);
             }
         } catch (RuntimeException e) {
-            // Si alguna falla, deshacer en orden inverso las aplicadas del lote
+            
             while (!aplicadasConExito.isEmpty()) {
                 aplicadasConExito.pop().revertir();
             }
-            throw e; // Propagar la excepción de la que falló
+            throw e; 
         }
     }
 
