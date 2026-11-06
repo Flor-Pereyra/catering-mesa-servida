@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Menu implements Propuesta {
     private String nombre;
-    private double descuentoPorcentaje; // entre 0 y 100
+    private double descuentoPorcentaje; 
     private List<Propuesta> componentes;
 
     public Menu(String nombre, double descuentoPorcentaje, List<Propuesta> componentes) {
